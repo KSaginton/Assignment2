@@ -1,1 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/KSaginton/Assignment2/main/cleaned_combined_annual_performance.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {
+      "calculate": "datum.CLOSE_USDJPY - datum.OPEN_USDJPY",
+      "as": "performance_JPY"
+    },
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "url": "https://vega.github.io/vega/data/world-110m.json",
+          "format": {"type": "topojson", "feature": "countries"}
+        },
+        "key": "id"
+      },
+      "as": "geo"
+    },
+    {
+      "filter": "datum.geo && datum.geo.id === 392" 
+    }
+  ],
+  "projection": {"type": "identity", "reflectY": true},
+  "mark": "geoshape",
+  "encoding": {
+    "shape": {
+      "field": "geo",
+      "type": "geojson"
+    },
+    "color": {
+      "field": "performance_JPY",
+      "type": "quantitative",
+      "scale": {
+        "domain": [-0.1, 0.1], 
+        "range": ["red", "green"]
+      }
+    }
+  }
+}
 
