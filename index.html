@@ -35,9 +35,13 @@
     <div class="container">
       <h1>Global Rating Map Visualisation</h1>
       <p>This map visualizes the global forex performance from 2000 to 2020. The quantities measured in the visualization are represented in percentages, showcasing the performance changes over the years.</p>
-      <div id="vis">
-        
-      </div>
+      <div id="vis"></div>
+      <div id="vis11"></div>
+      <script>
+           var vg_11 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/circle_plot.json"; 
+           vegaEmbed("#vis11", vg_11).then(function(result) {
+           }).catch(console.error);
+      </script>
       <script>
            var vg_1 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/global_rating_map.json"; 
            vegaEmbed("#vis", vg_1).then(function(result) {
