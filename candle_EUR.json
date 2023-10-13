@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "description": "A candlestick chart inspired by an example in Protovis (http://mbostock.github.io/protovis/ex/candlestick.html)",
+  "data": {"url": "https://raw.githubusercontent.com/KSaginton/Assignment2/main/cleaned_combined_annual_performance.csv"},
+  "encoding": {
+    "x": {
+      "field": "YEAR",
+      "type": "ordinal",
+      "title": "Year",
+    },
+    "y": {
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"title": "Price"}
+    },
+    "color": {
+      "condition": {
+        "test": "datum.OPEN_EURUSD < datum.CLOSE_EURUSD",
+        "value": "#06982d"
+      },
+      "value": "#ae1325"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {"field": "LOW_EURUSD"},
+        "y2": {"field": "HIGH_EURUSD"}
+      }
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "OPEN_EURUSD"},
+        "y2": {"field": "CLOSE_EURUSD"}
+      }
+    }
+  ]
+}
