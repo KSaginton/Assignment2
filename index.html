@@ -14,24 +14,28 @@
             color: white;
         }
 
-        #vis {
+        .container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            text-align: center;
         }
     </style>
   </head>
   <body>
-    <h1>Global Rating Map Visualisation</h1>
-    <div id="vis">
-      
+    <div class="container">
+      <h1>Global Rating Map Visualisation</h1>
+      <div id="vis">
+        
+      </div>
+      <script>
+           var vg_1 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/global_rating_map.json"; 
+           vegaEmbed("#vis", vg_1).then(function(result) {
+           }).catch(console.error);
+      </script>
     </div>
-    <script>
-         var vg_1 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/global_rating_map.json"; 
-         vegaEmbed("#vis", vg_1).then(function(result) {
-         }).catch(console.error);
-    </script>
     <h1>Candlestick Chart - EURUSD</h1>
     <div id="vis2">
       
