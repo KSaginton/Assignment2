@@ -10,15 +10,22 @@
     <title> Report on the forex ratings relationship from 2000 to 2020 </title>
   </head>
   <body>
-    <h1>Visualization</h1>
+    <h1>Global Rating Map Visualisation</h1>
     <div id="vis">
       
     </div>
     <script>
-         // contents of your vega-lite.js
          var vg_1 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/global_rating_map.json"; 
          vegaEmbed("#vis", vg_1).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+    </script>
+    <h1>Global Rating Map Visualisation</h1>
+    <div id="vis2">
+      
+    </div>
+    <script>
+         var vg_2 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/candle_EUR.json"; 
+         vegaEmbed("#vis2", vg_2).then(function(result) {
          }).catch(console.error);
     </script>
   </body>
