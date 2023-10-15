@@ -51,9 +51,10 @@
       </script>
     </div>
       <h1>Candlestick Chart - EURUSD</h1>
+      <div class="container-c">
         <div id="vis2" class = "candleStick"></div>
         <p>The EUR/USD currency pair is one of the most traded currency pairs in the world. The relationship between the Euro (EUR) and the US Dollar (USD) represents a blend of economic factors, including interest rate differentials, geopolitical events, and economic data releases from both the Eurozone and the United States. The fluctuations seen in the graph could be attributed to major economic announcements, policy changes from central banks, or significant global events impacting either the Eurozone or the US economy.</p>
-      
+      </div>
       <script>
            var vg_2 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/candle_EUR.json"; 
            vegaEmbed("#vis2", vg_2).then(function(result) {
@@ -84,7 +85,7 @@
     <div class="container-c">
       <div id="vis5" class = "candleStick"></div>
       <p>The CAD, commonly known as the "loonie," represents the Canadian Dollar, and it's among the top seven most traded currencies in the world. Often, the CAD is influenced by its relationship with the U.S., given the extensive trade between the two nations. Additionally, Canada's vast natural resources, especially oil, drive its currency's value. Thus, the CAD often correlates with oil prices. A rise in oil prices can lead to a strengthening of the CAD, considering Canada's substantial oil exports.</p>
-    <div class="container-c">
+    </div> 
     <script>
          var vg_5 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/candle_CAD.json"; 
          vegaEmbed("#vis5", vg_5).then(function(result) {
@@ -104,7 +105,7 @@
     <div class="container-c">
       <div id="vis11"></div>
       <p>The Circle Plot suggests the peformance of the currencies compared to the USD currency. For several attributes where the peformance shows negative, there is no area shown within the circle plot suggesting their performance.</p>
-    </div>
+    </div>  
     <script>
           var vg_11 = "https://raw.githubusercontent.com/KSaginton/Assignment2/main/circle_plot.json"; 
           vegaEmbed("#vis11", vg_11).then(function(result) {
